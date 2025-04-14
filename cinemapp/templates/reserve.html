@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineMAGIC | Rezervari </title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div class="menu">
+        <img src="Images\CINEMAGICLOGO.png" style="height: 150px;position: absolute; left: 150px;  ">
+        <div style="position: absolute; left: 25vw;">
+            <ul>
+                <li> <a href="home.html" class="linkitems">Acasa</a> </li> 
+                <li> <a href="news.html" class="linkitems">Noutati  </a> </li>
+                <li> <a href="reserve.html" class="linkitems"> Rezervare locuri </a> </li>
+                <li> <a href="contact.html" class="linkitems"> Contact </a></li>
+            </ul>
+        </div>
+    </div>
+    <div style="padding: 100px"></div>
+
+    <div class="menudropdown">
+        <button id="dropbutton" class="dropdownbutton"> - Alege un CineMAGIC - </button>
+        <div id="dropcontent" class="dropcontent">
+            <a href="#">Cinema 1</a>
+            <a href="#">Cinema 2</a>
+            <a href="#">Cinema 3</a>
+        </div>
+    </div>
+
+    <div id="formularinch" class="reservecontainer">
+        <form action="mailto:georgiana.galea@student.upt.ro">
+            <table class="reserveform">
+                <tr>
+                    <td>
+                        <label for="nume"> Nume : </label>
+                    </td>
+                    <td>
+                        <input type="text"><br>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="prenume"> Prenume :</label>
+                    </td>
+                    <td>
+                        <input type="text">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="datanasterii"> Data Nasterii : </label>
+                    </td>
+                    <td>
+                        <select name="year" id="year">
+                            <option value="pickyear"> - Anul -</option>
+                            <option value="2000">2000</option>
+                            <option value="2001">2001</option>
+                            <option value="2002">2002</option>
+                            <option value="2003">2003</option>
+                            <option value="2004">2004</option>
+                            <option value="2005">2005</option>
+                            <option value="2006">2006</option>
+                            <option value="2007">2007</option>
+                            <option value="2008">2008</option>
+                            <option value="2009">2009</option>
+                            <option value="2010">2010</option>
+                        </select>
+
+                        <select name="month" id="month" style="margin: 0px 0.78vw;">
+                            <option value="pickmonth">- Luna -</option>
+                            <option value="ianuarie">Ianuarie</option>
+                            <option value="februarie">Februarie</option>
+                            <option value="martie">Martie</option>
+                            <option value="aprilie">Aprilie</option>
+                            <option value="mai">Mai</option>
+                            <option value="iunie">Iunie</option>
+                            <option value="iulie">Iulie</option>
+                            <option value="august">August</option>
+                            <option value="septembrie">Septembrie</option>
+                            <option value="octombrie">Octombrie</option>
+                            <option value="noiembrie">Noiembrie</option>
+                            <option value="decembrie">Decembrie</option>
+                        </select>
+
+                        <select name="day" id="day">
+                            <option value="pickday">- Ziua -</option>
+                            <option value="01">01</option>
+                            <option value="02">02</option>
+                            <option value="03">03</option>
+                            <option value="04">04</option>
+                            <option value="05">05</option>
+                            <option value="06">06</option>
+                            <option value="07">07</option>
+                            <option value="08">08</option>
+                            <option value="09">09</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                            <option value="13">13</option>
+                            <option value="14">14</option>
+                            <option value="15">15</option>
+                            <option value="16">16</option>
+                            <option value="17">17</option>
+                            <option value="18">18</option>
+                            <option value="19">19</option>
+                            <option value="20">20</option>
+                            <option value="21">21</option>
+                            <option value="22">22</option>
+                            <option value="23">23</option>
+                            <option value="24">24</option>
+                            <option value="25">25</option>
+                            <option value="26">26</option>
+                            <option value="27">27</option>
+                            <option value="28">28</option>
+                            <option value="29">29</option>
+                            <option value="30">30</option>
+                            <option value="31">31</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <table>
+                            <tr>
+                                <td style="width: auto;text-align: center;">
+                                    <label for="fnfX" style="font-size: 2vh;"> Fast And Furious X</label>
+                                </td>
+                                <td style="width: auto;text-align: center;">
+                                    <label for="missImpFall" style="font-size: 2vh;"> 	
+                                        MISSION IMPOSIBLE</label>
+                                </td>
+                                <td style="width: auto;text-align: center;">
+                                    <label for="constantine" style="font-size: 2vh;"> Constantine</label>
+                                </td>    
+                            </tr>
+                            <tr>
+                                <td style="width: auto;text-align: center;">
+                                    <input type="radio" name="film" style="margin: 0; width: 13.3vw;">
+                                </td>
+                                <td style="width: auto;text-align: center;">
+                                    <input type="radio" name="film" style="margin: 0; width: 13.3vw;">
+                                </td>
+                                <td style="width: auto;text-align: center;">
+                                    <input type="radio" name="film" style="margin: 0; width: 13.3vw;">
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="submit" value="Inchiriaza" style="width: 15vw;font-family: monospace;">
+                    </td>
+                    <td>
+                        <input type="reset" value="Reseteaza" style="width: 15vw;font-family: monospace;">
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+    
+    <script src="reserve.js"></script>
+</body>
+</html>

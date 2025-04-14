@@ -1,0 +1,213 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CineMAGIC | Acasa</title>
+
+        {% load static %}
+        <link rel="stylesheet" type="text/css" href="{% static 'styles/style.css'%}">
+    </head>
+    <body>
+    <div class="menu">
+        <img src="{% static 'media/CINEMAGICLOGO.png' %}" style="height: 150px;position: absolute; left: 150px;  ">
+        <div style="position: absolute; left: 25vw;">
+            <ul>
+                <li> <a href="home.html" class="linkitems">Acasa</a> </li> 
+                <li> <a href="news.html" class="linkitems">Noutati  </a> </li>
+                <li> <a href="reserve.html" class="linkitems"> Rezervare locuri </a> </li>
+                <li> <a href="contact.html" class="linkitems"> Contact </a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div style="padding: 70px;"></div>
+    <table class="tablefilms"> 
+        <tr>
+                <td> 
+                    <img src="{% static 'media/FastAndFuriousX.jpg' %}" style="height: 200px;padding-right: 30px">
+                </td>
+                <td>
+                    <div class="films">
+                        <label class="filmtitle">FAST AND FURIOUS X</label>
+                        <div style="padding-top: 10px;">
+                            <img src="{% static 'media/N_15.png' %}" style="max-width: 40px">
+                            <label style="color: rgba(255, 255, 255, 0.851);padding-left: 10px;font-size: 15px; font-family: monospace;"> 
+                                Actiune, Crima, Mister | 141 min
+                            </label>
+                        </div>
+
+                        <div style="padding-top: 30px;">
+                            <label style="color: white;font-size: 20px;"><b>3D</b></label>
+                            <ul class="filmhourslist">
+                                <li class="filmhourslist"> 
+                                    <div class="filmhours">
+                                        <label class="filmhours">11:30</label>
+                                    </div>
+                                </li>
+                                <li class="filmhourslist"> 
+                                    <div class="filmhours">
+                                        <label class="filmhours">13:20</label>
+                                    </div>
+                                </li>
+                                <li class="filmhourslist"> 
+                                    <div class="filmhours">
+                                        <label class="filmhours">15:10</label>
+                                    </div>
+                                </li>
+                                <li class="filmhourslist"> 
+                                    <div class="filmhours">
+                                        <label class="filmhours">17:00</label>
+                                    </div>
+                                </li>
+                                <li class="filmhourslist"> 
+                                    <div class="filmhours">
+                                        <label class="filmhours">18:50</label>
+                                    </div>
+                                </li>
+                                <li class="filmhourslist"> 
+                                    <div class="filmhours">
+                                        <label class="filmhours">20:40</label>
+                                    </div>
+                                </li>
+                                <li class="filmhourslist"> 
+                                    <div class="filmhours">
+                                        <label class="filmhours">22:00</label>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>   
+                </td>
+        </tr>
+        <tr>
+            <td colspan="3" class="tablefilmstd"></td>
+        </tr>
+        <tr>
+            <td> 
+                    <img src="{% static 'media/MissionImposible.jpg' %}" style="height: 200px; padding-right: 30px">
+            </td>
+            <td>
+                <div class="films">
+                    <label class="filmtitle">MISSION IMPOSIBLE - FALLOUT</label>
+                    <div style="padding-top: 10px;">
+                        <img src="{% static 'media/AP_12.png' %}" style="max-width: 48px">
+                        <label style="color: rgba(255, 255, 255, 0.851);padding-left: 10px;font-size: 15px; font-family: monospace;"> 
+                            Thriller, Aventura, Actiune | 148 min
+                        </label>
+                    </div>
+                    <div style="padding-top: 30px;">
+                        <label style="color: white;font-size: 20px;"><b>3D</b></label>
+                        <ul class="filmhourslist">
+                            <li class="filmhourslist"> 
+                                <div class="filmhours">
+                                    <label class="filmhours">11:50</label>
+                                </div>
+                            </li>
+                            <li class="filmhourslist"> 
+                                <div class="filmhours">
+                                    <label class="filmhours">14:50</label>
+                                </div>
+                            </li>
+                            <li class="filmhourslist"> 
+                                <div class="filmhours">
+                                    <label class="filmhours">17:30</label>
+                                </div>
+                            </li>
+                            <li class="filmhourslist"> 
+                                <div class="filmhours">
+                                    <label class="filmhours">19:50</label>
+                                </div>
+                            </li>
+                            <li class="filmhourslist"> 
+                                <div class="filmhours">
+                                    <label class="filmhours">21:00</label>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3" class="tablefilmstd"></td>
+        </tr>
+        <tr>
+            <td>
+                    <img src="{% static 'media/Constantine.jpg' %}" style="height: 200px;padding-right: 30px">
+            </td>
+            <td>
+                <div class="films">
+                    <label class="filmtitle"> CONSTANTINE </label> <br>
+                    <div style="padding-top: 10px;">
+                        <img src="{% static 'media/N_15.png' %}" style="max-width: 40px">
+                        <label style="color: rgba(255, 255, 255, 0.851);padding-left: 10px;font-size: 15px; font-family: monospace;"> 
+                            Actiune, Horror, Drama | 121 min
+                        </label>
+                    </div>
+                    <div style="padding-top: 30px;">
+                        <label style="color: white;font-size: 20px;"><b>2D</b></label>
+                        <ul class="filmhourslist">
+                            <li class="filmhourslist"> 
+                                <div class="filmhours">
+                                    <label class="filmhours">17:30</label>
+                                </div>
+                            </li>
+                            <li class="filmhourslist"> 
+                                <div class="filmhours">
+                                    <label class="filmhours">19:50</label>
+                                </div>
+                            </li>
+                            <li class="filmhourslist"> 
+                                <div class="filmhours">
+                                    <label class="filmhours">21:00</label>
+                                </div>
+                            </li>
+                            <li class="filmhourslist"> 
+                                <div class="filmhours">
+                                    <label class="filmhours">22:00</label>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </td>
+        </tr>
+        {% for film in filme %}
+        <tr>
+            <td colspan="3" class="tablefilmstd"></td>
+        </tr>
+        <tr>
+            <td>
+                    <!-- <img src="{% static 'media/Constantine.jpg' %}" style="height: 200px;padding-right: 30px"> -->
+            </td>
+            <td>
+                <div class="films">
+                    <label class="filmtitle"> {{ film.title }}</label> <br>
+                    <div style="padding-top: 10px;">
+                        <img src="{% static 'media/N_15.png' %}" style="max-width: 40px">
+                        <label style="color: rgba(255, 255, 255, 0.851);padding-left: 10px;font-size: 15px; font-family: monospace;"> 
+                            {{ film.genre }} | {{ film.duration }} min
+                        </label>
+                    </div>
+                    <div style="padding-top: 30px;">
+                        <label style="color: white;font-size: 20px;"><b>{{ film.type }}</b></label>
+                        <ul class="filmhourslist">
+                            {% for hour in film.hours %}
+                            <li class="filmhourslist"> 
+                                <div class="filmhours">
+                                    <label class="filmhours"> {{ hour }}</label>
+                                </div>
+                            </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+    <script src="homescript.js"></script>
+    </body>
+    </html>

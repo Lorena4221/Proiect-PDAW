@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'styles/main.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/add_film.css' %}">
+    <title>Adauga film</title>
+</head>
+<body>
+    <div class="main-container">
+        <div class="left-container">
+            <h2>Adauga un film</h2>
+            <form method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit">Adauga</button>
+            </form>
+        </div>
+        <div class="right-container">
+            {% for film in filme%}
+                <div class="film-card">
+                    <h3>{{ film.title }}</h3>
+
+                    <form action="{% url 'delete_film' film.title %}" method="post">
+                        {% csrf_token %}
+                        <button type="submit">Delete</button>
+                    </form>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>

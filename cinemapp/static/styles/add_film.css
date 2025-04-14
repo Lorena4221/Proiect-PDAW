@@ -1,0 +1,91 @@
+.main-container{
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+}
+
+.left-container{
+    width: 30vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgb(7, 0, 11, 0.3); ;
+    border-radius: 0px 10px 10px 0px;
+    color: white;
+}
+
+.left-container form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+}
+
+.left-container form p{
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    width: 15vw;
+    margin-top: 1rem;
+}
+
+.left-container form input{
+    border: none;
+    border-radius: 5px;
+}
+
+.left-container form button{
+    margin-top: 2rem;
+    border: none;
+    border-radius: 10px;
+    width: 20vw;
+    height: 5vh;
+    font-size: 1.3rem;
+}
+
+.left-container form button:hover{
+    background: rgb(7, 0, 11, 0.5);
+    cursor: pointer;
+    color : white;
+    transition: 0.1s ease;
+}
+
+.right-container {
+    width: 70vw;
+    padding: 3rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    justify-items: center;
+    gap: 1rem;
+  }
+  
+
+.film-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2rem;
+    align-items: center;
+    width: 200px;
+    height: 200px;
+    border: solid 1px white;
+    border-radius: 5px;
+    color: white;
+}
+
+.film-card button{
+    border: solid 1px white;
+    border-radius: 10px;
+    background-color: transparent;
+    color: white;
+    width:  6rem;
+    height: 2rem;
+}
+
+.film-card button:hover{
+    background: rgb(117, 0, 0);
+    cursor: pointer;
+    transition: 0.1s ease;
+}

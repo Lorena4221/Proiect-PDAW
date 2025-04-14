@@ -1,0 +1,401 @@
+
+           html, body {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            background-repeat: no-repeat;
+            background-image: linear-gradient(black 30%, rgb(179, 0, 255));
+            background-size: cover;
+        }
+
+        .linkitems
+        {
+            color: white;
+            transition: color 0.23s ease;
+            font-family: monospace;
+            font-size: 30px;
+            text-decoration: none;
+        
+        }
+
+        .filmtitle
+        {
+            color: white;
+            font-family: monospace;
+            font-size: 23px;
+            text-decoration: none;
+        }
+
+        .menu 
+    {
+        position: fixed;
+        top: 0;
+        z-index: 100;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+        height: 125px;
+        background-color: black;
+    }
+
+        .menu ul
+    {   
+        list-style-type: none;
+        margin: 0;
+        padding-bottom: 15px;
+        display: flex;
+        justify-content: center;
+        flex-grow: 1;
+        flex-direction: row;
+        align-items: flex-end; 
+    }
+
+         .menu ul li
+    {
+        margin-right: 100px; 
+        padding: 0px;
+        text-align: center;
+    }
+
+    .films
+    {
+        height: 200px;
+        width: 50vw; 
+    }
+
+    .tablefilms{
+        position: relative;
+        left: 175px ;
+        border-spacing: 0px 20px;
+        width: 60%;
+    }
+
+    .tablefilms td:not(.tablefilmstd)
+    {
+        position: relative;
+        left: 40px;
+        padding-top: 10px;
+    }
+
+    .tablefilmstd
+    {
+        border-bottom-color: rgba(255, 255, 255, 0.167);
+        border-bottom-style: solid;
+        border-bottom-width: 1.5px;
+        padding: 5px;
+    }
+
+    .filmhours
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(179, 0, 255);
+        border-radius: 4px;
+        width: 65px;
+        height: 45px;
+        transition: background-color 0.3s ease;
+    }
+
+    .filmhours label
+    {
+        font-family: monospace;
+        color: white;
+        font-weight: bold;
+        font-size: 17px;
+        align-self: center
+    }
+
+    .filmhourslist
+    {
+        margin: 0px;
+        padding: 0;
+        padding-top: 10px;
+        list-style-type: none;
+    }
+    
+    .filmhourslist li
+    {
+        margin: 0px;
+        padding-right: 2px;
+        display: inline-block;
+    }
+
+    .hoverTR
+    {
+        transform: scale(1.1);
+        transition: transform 0.3s ease;
+    }
+    
+    .unhoverTR
+    {
+        transform: scale(1);
+        transition: transform 0.3s ease;
+    }
+
+    .plasareformular {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        color: white;
+      }
+    
+    .logform
+    {
+        border-bottom-color: rgba(255, 255, 255, 0.167);
+        border-bottom-style: solid;
+        border-bottom-width: 1.5spx;
+        border-top-color: rgba(255, 255, 255, 0.167);
+        border-top-style: solid;
+        border-top-width: 1.5spx;
+        height: 55vh;
+        width: 35vw;
+    }
+
+    .logform label
+    {
+        font-family: monospace;
+        font-size: 20px;
+    }
+    .textinput
+    {
+        height: 3vh;
+        width: 13vw;
+    }
+
+    .logform table
+    {
+        position: relative;
+        left: 5.3vw;
+    }
+
+    .logform table td:not(.invalid_feed){
+        padding-right: 20px;
+        padding-top: 0px;
+        text-align: right;
+    }
+
+    .formbutton{
+        
+        background-color: rgb(179, 0, 255);
+        color: white;
+        font-family: monospace;
+        font-size: 20px;
+        border-radius: 4px;
+        height: 40px;
+        max-width: 200px;
+        min-width: 100px;
+        border: 0px;
+        margin-right: 20px;
+    }
+    
+    .invalid_feed
+    {
+        text-align: center;
+        color: red;
+        font-size: 12px;
+        font-family: monospace;
+    }
+
+    .newstable
+    {
+        position: relative;
+        left: 5vw;
+        width: 90vw;
+        justify-content: center;
+        align-items: center;
+        border-collapse: separate;
+        border-spacing: 0px;
+    }
+
+    .newstable td{
+        min-width: 30vw;
+        border-right-color: rgba(255, 255, 255, 0.167);
+        border-right-style: solid;
+        border-right-width: 1.5px;
+    }
+
+    .newstable td.excludedtd
+    {
+        border: 0px;
+    }
+
+    .newstable td p
+    {
+        padding: 5px 2vw;
+        font-family: monospace;
+        font-size: 18px;
+        color: white;
+    }
+
+    .newstabledim{
+        width: 30vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .newfilmpic
+    {
+        max-width: 25vw;
+        max-height: 100vh;
+    }
+
+    .newsfilmtitle
+    {
+        color: white; 
+        text-align: center; 
+        font-family: monospace;
+        font-size: 50px;
+        margin: 0px;
+        margin-bottom: 20px;
+    }
+
+    .labeldescr
+    {
+        margin-top: 5vh;
+        margin-bottom: 0vh;
+        font-size: 30px;
+        font-family: monospace;
+        text-align: center;
+        color: white;
+    }
+    
+    .menudropdown
+    {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        position : absolute;
+        text-align: center;
+        width: 100vw;
+    }
+
+    .dropdownbutton
+    {
+        margin: 0 auto;
+        padding: 0px;
+        font-family: monospace;
+        border: 0px;
+        border-radius: 4px;
+        height: 4vh;
+        width: 40vw;
+        cursor: pointer;
+    }
+
+    .dropdownbutton:hover, .dropdownbutton:focus
+    {
+        background-color: rgb(224, 223, 223);
+    }
+
+    .dropcontent
+    {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        margin-top: 33px;
+        background-color: white;
+        font-family: monospace;
+        min-width: 40vw;
+        border-radius: 4px;
+        overflow-y: scroll;
+        max-height: 400px;
+        z-index: 1;
+    }
+
+    .dropcontent a
+    {
+        height: 15px;
+        text-decoration: none;
+        font-family: monospace;
+        padding: 12px 16px;
+        color: black;
+    }
+
+    .dropcontent a:hover
+    {
+        background-color: rgb(224, 223, 223);
+    }
+
+    .contentshow
+    {
+        display: flex;
+    }
+
+    .contenthide
+    {
+        display: none;
+    }
+
+    .reservecontainer
+    {
+        display: none;
+        justify-content: center;
+        position: absolute;
+        height: 40vh;
+        width: 40vw;
+        left: 28vw;
+        margin-top: 10vh;
+    }
+
+    .reserveform{
+        text-align: right;
+    }
+
+    .reserveform td{
+        padding-bottom: 20px;
+    }
+
+    
+    
+    .reserveform label
+    {
+        padding: 0;
+        margin: 0;
+        font-family: monospace;
+        font-size: 3.5vh;
+        color: white;
+    }
+
+    .reserveform input
+    {
+
+        padding: 0;
+        margin: 0;
+        border: 0;
+        border-radius: 4px;
+        height: 3vh;
+        width: 20vw;
+        margin-left: 3vw;
+    }
+
+    .reserveform select
+    {
+        padding: 0;
+        margin: 0;
+        border: 0;
+        border-radius: 4px;
+        font-family: monospace;
+        height: 3vh;
+        text-align: center;
+        font-size: 2vh;
+    }
+
+    .contactdetails
+    {
+        position: absolute;
+        text-align: center;
+        height: 40vh;
+        width: 70vw;
+        left: 15vw;
+        top: 30vh;
+        font-family: monospace;
+        font-size: 30px;
+        color: white;
+    }
