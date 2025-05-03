@@ -18,6 +18,10 @@
                 <li> <a href="news.html" class="linkitems">Noutati  </a> </li>
                 <li> <a href="reserve.html" class="linkitems"> Rezervare locuri </a> </li>
                 <li> <a href="contact.html" class="linkitems"> Contact </a></li>
+                <li><form method="post" action="{% url 'logout' %}">
+                    {% csrf_token %}
+                    <button type="submit">Logout</button>
+                </form></li>
             </ul>
         </div>
     </div>
