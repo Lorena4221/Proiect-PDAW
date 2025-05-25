@@ -1,0 +1,52 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-header{
+    width: 100%;
+    text-align: center;
+}
+
+.container {
+    width: 50vw;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    gap: 2rem;
+}
+
+.container form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.card-body{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-group{
+    width: 50%;
+    display: flex;
+    gap: 3rem;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.form-group input,select{
+    width: 10vw;
+}
+
+
+.container a:visited{
+    color: white;
+}

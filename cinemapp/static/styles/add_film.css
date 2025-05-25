@@ -34,6 +34,7 @@
 .left-container form input{
     border: none;
     border-radius: 5px;
+    max-width: 10vw;
 }
 
 .left-container form button{

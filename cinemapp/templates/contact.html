@@ -5,20 +5,31 @@
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>CineMAGIC | Contact</title>
-      <link rel="stylesheet" type="text/css" href="style.css">
+      {% load static %}
+     <link rel="stylesheet" href="{% static 'styles/main.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/style.css' %}">
+    <script src="{% static 'scripts/homescript.js' %}" defer></script>
 </head>
 <body>
       <div class="menu">
-            <img src="Images\CINEMAGICLOGO.png" style="height: 150px;position: absolute; left: 150px;  ">
-            <div style="position: absolute; left: 25vw;">
-                <ul>
-                    <li> <a href="home.html" class="linkitems">Acasa</a> </li> 
-                    <li> <a href="news.html" class="linkitems">Noutati  </a> </li>
-                    <li> <a href="reserve.html" class="linkitems"> Rezervare locuri </a> </li>
-                    <li> <a href="contact.html" class="linkitems"> Contact </a></li>
-                </ul>
-            </div>
+        <img src="{% static 'media/CINEMAGICLOGO.png' %}" style="height: 150px;position: absolute; left: 150px;  ">
+        <div style="position: absolute; left: 25vw;">
+            <ul>
+                <li> <a href="{% url 'home' %}" class="linkitems">Acasa</a> </li> 
+                <li> <a href="{% url 'news' %}" class="linkitems">Noutati  </a> </li>
+                {% if user.userprofile.role == 'client' %}
+                    <li> <a href="{% url 'reserve' %}" class="linkitems"> Rezervare locuri </a> </li>
+                    <li> <a href="{% url 'contact' %}" class="linkitems"> Contact </a></li>
+                {% else %}
+                    <li><a href="{% url 'add_film' %}" class="linkitems">Adauga Film</a></li>
+                {% endif %}
+                <li><form method="post" action="{% url 'logout' %}">
+                    {% csrf_token %}
+                    <button type="submit">Logout</button>
+                </form></li>
+            </ul>
         </div>
+    </div>
         <div style="padding: 100px"></div>
 
         <div class="contactdetails">

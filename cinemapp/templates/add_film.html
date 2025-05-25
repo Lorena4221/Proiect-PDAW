@@ -9,10 +9,23 @@
     <title>Adauga film</title>
 </head>
 <body>
+    <div>
+        <a href="{% url 'home' %}" style="
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            padding: 10px 15px;
+            border-radius: 5px;
+            border: solid 1px white;
+        ">Acasa</a>
+    </div>
     <div class="main-container">
         <div class="left-container">
             <h2>Adauga un film</h2>
-            <form method="post">
+            <form method="post" enctype="multipart/form-data">
                 {% csrf_token %}
                 {{ form.as_p }}
                 <button type="submit">Adauga</button>
@@ -20,7 +33,9 @@
         </div>
         <div class="right-container">
             {% for film in filme%}
-                <div class="film-card">
+                <div class="film-card" {% if film.image %}
+                 style="background-image: url('{{ film.image.url }}'); background-size: cover; background-position: center;"
+             {% endif %}>
                     <h3>{{ film.title }}</h3>
 
                     <form action="{% url 'delete_film' film.title %}" method="post">

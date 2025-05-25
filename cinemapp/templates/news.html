@@ -5,17 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CineMAGIC | Noutati</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'styles/main.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/style.css' %}">
+    <script src="{% static 'scripts/homescript.js' %}" defer></script>
 </head>
 <body>
     <div class="menu">
-        <img src="Images\CINEMAGICLOGO.png" style="height: 150px;position: absolute; left: 150px;  ">
+        <img src="{% static 'media/CINEMAGICLOGO.png' %}" style="height: 150px;position: absolute; left: 150px;  ">
         <div style="position: absolute; left: 25vw;">
             <ul>
-                <li> <a href="home.html" class="linkitems">Acasa</a> </li> 
-                <li> <a href="news.html" class="linkitems">Noutati  </a> </li>
-                <li> <a href="reserve.html" class="linkitems"> Rezervare locuri </a> </li>
-                <li> <a href="contact.html" class="linkitems"> Contact </a></li>
+                <li> <a href="{% url 'home' %}" class="linkitems">Acasa</a> </li> 
+                <li> <a href="{% url 'news' %}" class="linkitems">Noutati  </a> </li>
+                {% if user.userprofile.role == 'client' %}
+                    <li> <a href="{% url 'reserve' %}" class="linkitems"> Rezervare locuri </a> </li>
+                    <li> <a href="{% url 'contact' %}" class="linkitems"> Contact </a></li>
+                {% else %}
+                    <li><a href="{% url 'add_film' %}" class="linkitems">Adauga Film</a></li>
+                {% endif %}
+                <li><form method="post" action="{% url 'logout' %}">
+                    {% csrf_token %}
+                    <button type="submit">Logout</button>
+                </form></li>
             </ul>
         </div>
     </div>
@@ -37,17 +48,17 @@
         <tr>
             <td>
                 <div class="newstabledim">
-                    <img src="Images/Oppenheimer.jpg" class="newfilmpic">
+                    <img src="{% static 'media/Oppenheimer.jpg' %}" class="newfilmpic">
                 </div>
             </td>
             <td>
                 <div class="newstabledim">
-                    <img src="Images/BlueBettle.jpeg" class="newfilmpic">
+                    <img src="{% static 'media/BlueBettle.jpeg' %}" class="newfilmpic">
                 </div>
             </td>
             <td class="excludedtd">
                 <div class="newstabledim">  
-                    <img src="Images/TheCreator.jpeg" class="newfilmpic">
+                    <img src="{% static 'media/TheCreator.jpeg' %}" class="newfilmpic">
                 </div>
             </td>
         </tr>
@@ -113,13 +124,13 @@
         </tr>
         <tr>
             <td>
-                <h2 style="text-align: center; color: white; font-family: monospace;">JULY 21, 2023</h2>
+                <h2 style="text-align: center; color: white; font-family: monospace;">JULY 21, 2026</h2>
             </td>
             <td>
-                <h2 style="text-align: center; color: white; font-family: monospace;">AUGUST 18, 2023</h2>
+                <h2 style="text-align: center; color: white; font-family: monospace;">AUGUST 18, 2026</h2>
             </td>
             <td class="excludedtd">
-                <h2 style="text-align: center; color: white; font-family: monospace;">SEPTEMBER 23, 2023</h2>
+                <h2 style="text-align: center; color: white; font-family: monospace;">SEPTEMBER 23, 2026</h2>
             </td>
         </tr>
     </table>
